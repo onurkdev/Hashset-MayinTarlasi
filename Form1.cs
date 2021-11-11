@@ -53,7 +53,7 @@ namespace Hashset
         {
             
             
-            string bomb = "button" + rnd.Next(0, 20).ToString();
+            string bomb = "button" + rnd.Next(0, 100).ToString();
             if (!bombs.Contains(bomb))
             { 
                 bombs.Add(bomb);
