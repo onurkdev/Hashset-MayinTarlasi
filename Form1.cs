@@ -86,6 +86,7 @@ namespace Hashset
                     button.Name = "button" + name.ToString();
                     //button.Text = name.ToString();
                     Console.WriteLine(button.Name.ToString());
+                    button.BackColor = Color.White;
                     button.Width = 30;
                     button.Height = 30;
                     button.Left = left;
@@ -114,20 +115,19 @@ namespace Hashset
         private void gamereset()
         {
 
-            foreach (Button button in Form.ActiveForm.Controls)
+            foreach (Button button in this.Controls)
             {
-                if (button.Name != "Resetbutton")
-                {
-                    button.Enabled = true;
-                    Form.ActiveForm.Controls.Remove(button);
-                }
+                button.Enabled = true;
+                button.BackColor = Color.White;
+
+
             }
             Random newrnd = new Random();
             this.rnd = newrnd;
 
             bombs.Clear();
             bombpicker();
-            buttonplacer();
+           
         }
 
         private void Form1_Click(object sender, EventArgs e)
